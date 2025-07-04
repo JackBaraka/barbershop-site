@@ -5,9 +5,18 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}", // Added components directory
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1a202c", // Example custom color
+        secondary: "#2d3748",
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'], // Example custom font
+      },
+    },
   },
   plugins: [forms],
 }
