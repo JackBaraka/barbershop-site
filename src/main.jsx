@@ -10,12 +10,12 @@ createRoot(document.getElementById('root')).render(
 );
 import { BrowserRouter } from 'react-router-dom'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
-)
+  </StrictMode>
+);
 import React from 'react';
 import ReactDOM from 'react-dom/client';
