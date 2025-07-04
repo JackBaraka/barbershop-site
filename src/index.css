@@ -17,7 +17,56 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Add a subtle box-shadow and smooth transitions for cards and containers */
+.card, .container {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+  border-radius: 16px;
+  background: rgba(36,36,36,0.95);
+  transition: box-shadow 0.3s, transform 0.3s;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
 
+.card:hover, .container:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 3px 8px rgba(0,0,0,0.08);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Improved input styling */
+input, textarea, select {
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #181818;
+  color: #fff;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px #646cff33;
+  outline: none;
+}
+
+/* Responsive typography */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  .card, .container {
+    padding: 1rem;
+  }
+}
+
+/* Utility class for visually hidden content (accessibility) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
 a {
   font-weight: 500;
   color: #646cff;
